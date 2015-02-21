@@ -1,5 +1,5 @@
 #!/bin/sh
-CONF=""
+CONF="--prefix=/usr"
 
 set -x
 aclocal -I autoconfig/m4

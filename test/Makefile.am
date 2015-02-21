@@ -1,7 +1,7 @@
 # $ Id: $
 
 # location where plug-in will be installed
-plugindir= $(libdir)/i386-linux-gnu/gstreamer-@GST_MAJORMINOR@
+plugindir= $(libdir)/@host_cpu@-@host_os@/gstreamer-@GST_MAJORMINOR@
 
 NULL = 
 MAINTAINERCLEANFILES = Makefile.in
