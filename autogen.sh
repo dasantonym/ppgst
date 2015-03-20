@@ -1,5 +1,6 @@
 #!/bin/sh
-CONF="--prefix=/usr"
+case `uname` in Darwin*) CONF="--prefix=/usr/local" ;;
+  *) CONF="--prefix=/usr" ;; esac
 
 set -x
 aclocal -I autoconfig/m4

@@ -1,7 +1,11 @@
 # $ Id: $
 
 # location where plug-in will be installed
-plugindir= $(libdir)/gstreamer-@GST_MAJORMINOR@
+ifeq ($(UNAME), Darwin)
+	plugindir= $(libdir)/gstreamer-@GST_MAJORMINOR@
+else
+	plugindir= $(libdir)/@host_cpu@-@host_os@/gstreamer-@GST_MAJORMINOR@
+endif
 
 NULL = 
 MAINTAINERCLEANFILES = Makefile.in
