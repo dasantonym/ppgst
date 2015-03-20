@@ -3,7 +3,8 @@ CONF="--prefix=/usr"
 
 set -x
 aclocal -I autoconfig/m4
-libtoolize --force --copy
+case `uname` in Darwin*) glibtoolize --force --copy ;;
+  *) libtoolize --force --copy ;; esac
 autoheader
 automake --add-missing --copy
 autoconf
