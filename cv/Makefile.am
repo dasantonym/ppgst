@@ -3,12 +3,7 @@
 UNAME := $(shell uname)
 
 # location where plug-in will be installed
-ifeq ($(UNAME), Darwin)
-	plugindir= $(libdir)/gstreamer-@GST_MAJORMINOR@
-else
-	plugindir= $(libdir)/@host_cpu@-@host_os@/gstreamer-@GST_MAJORMINOR@
-endif
-
+plugindir= $(libdir)/@host_cpu@-@host_os@/gstreamer-@GST_MAJORMINOR@
 
 NULL = 
 MAINTAINERCLEANFILES = Makefile.in
